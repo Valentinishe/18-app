@@ -38,4 +38,5 @@ jobs:
           chmod 400 deploy_key
           ssh -i deploy_key -o StrictHostKeyChecking=no ${{ vars.USER }}@${{ vars.REMOTE_HOST }} 'mkdir -p ${{ vars.DEST_FOLDER }}'
           scp -i deploy_key -o StrictHostKeyChecking=no -r build/ ${{ vars.USER }}@${{ vars.REMOTE_HOST }}:${{ vars.DEST_FOLDER }}
-          ssh -i deploy_key -o StrictHostKeyChecking=no ${{ vars.USER }}@${{ vars.REMOTE_HOST }} 'cd ${{ vars.DEST_FOLDER }} && npm install && npm start'
+          ssh -i deploy_key -o StrictHostKeyChecking=no ${{ vars.USER }}@${{ vars.REMOTE_HOST }} 'ls -la ${{ vars.DEST_FOLDER }}'
+          ssh -i deploy_key -o StrictHostKeyChecking=no ${{ vars.USER }}@${{ vars.REMOTE_HOST }} 'cd ${{ vars.DEST_FOLDER }} && npm start'
