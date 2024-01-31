@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'sudo npm run start'
+                sh 'npm run start'
             }
         }
     }
