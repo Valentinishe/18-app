@@ -4,8 +4,8 @@
   "description": "Your project description",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start build/index.js --name app",
-    "destroy": "pm2 delete app",
+    "start": "npx pm2 start build/index.js --name app",
+    "destroy": "npx pm2 delete app",
     "build": "tsc",
     "test": "jest"
   },
