@@ -4,7 +4,7 @@
   "description": "Your project description",
   "main": "index.js",
   "scripts": {
-    "start": "npx pm2 stop all && npx pm2 start build/index.js --name app -f",
+    "start": "npx pm2 start build/index.js --name app",
     "destroy": "npx pm2 delete app",
     "build": "tsc",
     "test": "jest"
